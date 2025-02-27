@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Script_Hea_Foo/Header.css">
+    <link rel="stylesheet" href="../Script_Hea_Foo/Footer.css">
+    <link rel="stylesheet" href="../ESTABECERMETASALUD_1/Establecer_M_S.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Test de Bienestar</title>
+</head>
+<header>
+    <div class="logo-container">
+        <a href="/inicio-de-sesion/Modulo-iniciar-sesion/home/home.html"><img href="/inicio-de-sesion/Modulo-iniciar-sesion/home/home.html" src="../inclued/Logo (2).jpg" alt="Logo" class="logo"></a>
+       
+    </div>
+    <button2 class="hamburger" onclick="toggleHamburgerMenu()">☰</button2>
+    <nav class="nav-links">
+        <a href="/inicio-de-sesion/Modulo-iniciar-sesion/home/home.html" class="nav-item">Inicio</a>
+        <div class="nav-item modules-item" onclick="toggleModules()">Módulos</div>
+        <a href="/mapa-de-suenos/todohh/inicio/link/quienessomos.html" class="nav-item  ">Acerca de </a>
+        <a href="/mapa-de-suenos/todohh/inicio/link/contacto.html" class="nav-item ">Contacto</a>
+        <div id="modules-indicator" class="modules-indicator"></div>
+        
+    </nav>
+    <div class="nav-right">
+       
+        
+    </div>
+    <div class="profile-container">
+        <div class="profile-box">
+            <a href="#nombre" class="nav-item special-item profile-name">Jhon Sebastian</a>
+            <img src="https://media-bog2-2.cdn.whatsapp.net/v/t61.24694-24/464251565_515510564641224_6041331179142873332_n.jpg?ccb=11-4&oh=01_Q5AaICnwz63t7DHwbUzq6FWac1TQ_I-SzEdUmOnmaAtiBuu0&oe=6741C773&_nc_sid=5e03e0&_nc_cat=104" alt="Foto de perfil" class="profile-pic" onclick="toggleProfileMenu()">
+            <div id="profile-menu" class="profile-menu">
+                <a href="#perfil">Perfil</a>
+                <a href="#cerrar-sesion">Cerrar sesión</a>
+            </div>
+        </div>
+    </div>
+    <!-- Menú hamburguesa -->
+<div id="hamburger-menu" class="hamburger-menu">
+<a href="/inicio-de-sesion/Modulo-iniciar-sesion/home/home.html" class="hamburger-item">Inicio</a>
+<a href="#"><div class="hamburger-item" onclick="toggleModulues()">Módulos</div></a>
+<!-- Contenedor de módulos (oculto por defecto) -->
+<div id="modules-content" class="modules-content" style="display: none;">
+    <a href="/mapa-de-suenos/Inicio/Inicio.html"><div class="modulo">Mapa de sueños</div></a>
+    <a href="/alimentacion/Inicio/index.html"><div class="modulo">Alimentación</div></a>
+    <a href="/musicoterapia/Vistas1.1/bienvenido_a_musicoterapia.html"><div class="modulo">Musicoterapia</div></a>
+    <a href="/rutinas-de-ejercicios/inicio/index.html"><div class="modulo">Ejercicios</div></a>
+    <a href="/atencion-profesional/USUARIO/Home_Usuario/HomeUsuario.html"><div class="modulo">Atención Profesional</div></a>
+</div>
+<a href="#perfil" class="hamburger-item">Perfil</a>
+</div>
+    <!-- Pestaña de módulos -->
+    <div id="modules-overlay" class="modules-overlay">
+        <div class="module-grid">
+           <a href="/mapa-de-suenos/Inicio/Inicio.html"> <div class="module">Mapa de sueños</div></a>
+           <a href="/alimentacion/Inicio/index.html"><div class="module">Alimentación</div></a>
+            <a href="/musicoterapia/Vistas1.1/bienvenido_a_musicoterapia.html"><div class="module">Musicoterapia</div></a>
+            <a href="/rutinas-de-ejercicios/inicio/index.html"><div class="module">Ejercicios</div></a>
+            <a href="/atencion-profesional/USUARIO/Home_Usuario/HomeUsuario.html"><div class="module">Atención Profesional</div></a>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="container">
+        <h2>Test de Bienestar</h2>
+        <form id="testForm">
+            
+            <!-- 🔹 Sección 1: Datos Básicos -->
+            <fieldset>
+                <legend>Datos Básicos del Usuario</legend>
+                <label for="peso">Peso actual (kg):</label>
+                <input type="number" id="peso" required>
+    
+                <label for="altura">Altura (cm):</label>
+                <input type="number" id="altura" required>
+    
+                <label for="edad">Edad (años):</label>
+                <input type="number" id="edad" required>
+    
+                <label for="sexo">Sexo biológico:</label>
+                <select id="sexo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="no_decir">Prefiero no decirlo</option>
+                </select>
+    
+                <label for="complexion">Complexión corporal:</label>
+                <select id="complexion" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="delgada">Delgada</option>
+                    <option value="promedio">Promedio</option>
+                    <option value="musculosa">Musculosa</option>
+                    <option value="sobrepeso">Con sobrepeso</option>
+                </select>
+            </fieldset>
+    
+            <!-- 🔹 Sección 2: Actividad Física y Estilo de Vida -->
+            <fieldset>
+                <legend>Hábitos de Actividad Física y Estilo de Vida</legend>
+                <label for="actividad">Nivel de actividad física semanal:</label>
+                <select id="actividad" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="sedentario">Sedentario - No hago ejercicio</option>
+                    <option value="ligero">Ligero - 1 a 2 veces por semana</option>
+                    <option value="moderado">Moderado - 3 a 4 veces</option>
+                    <option value="alto">Alto - 5 o más veces por semana</option>
+                </select>
+    
+                <label for="suenio">Horas de sueño promedio por noche:</label>
+                <select id="suenio" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="menos_5">Menos de 5</option>
+                    <option value="5_6">5-6</option>
+                    <option value="7_8">7-8</option>
+                    <option value="mas_8">Más de 8</option>
+                </select>
+            </fieldset>
+    
+            <!-- 🔹 Sección 3: Estrés y Salud Mental -->
+            <fieldset>
+                <legend>Estrés y Salud Mental</legend>
+                <label for="estres">Nivel de estrés actual:</label>
+                <select id="estres" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="bajo">Bajo</option>
+                    <option value="moderado">Moderado</option>
+                    <option value="alto">Alto</option>
+                    <option value="muy_alto">Muy alto</option>
+                </select>
+            </fieldset>
+    
+            <!-- 🔹 Sección 4: Objetivo de Salud -->
+            <fieldset>
+                <legend>Objetivo de Salud</legend>
+                <label for="objetivo">¿Cuál es tu principal objetivo de salud?</label>
+                <select id="objetivo">
+                    <option value="perder_peso">Perder peso</option>
+                    <option value="mantener_peso">Mantener peso</option>
+                    <option value="ganar_peso">Ganar peso</option>
+                    <option value="mejorar_habitos">Mejorar hábitos alimenticios</option>
+                    <option value="mejorar_salud">Mejorar mi salud en general</option>
+                </select>
+            </fieldset>
+    
+            <!-- 🔹 Botón de Envío -->
+            <div class="boton-container">
+                <a class="button" type="button" onclick="generarMeta()">Enviar</a>
+            </div>
+        </form>
+    </div>
+    
+ 
+    <div class="meta-box" id="metaBox">
+        <h3 id="meta">Meta personalizada:</h3>
+            <div class="image-container">
+                <img src="../inclued/image._Resul_test.png" alt="Icono de resultados" />
+                <a href="../INICIO_2/inicio.html"></a>
+            </div>
+        <a class="continue-button" href="../INICIO_2/inicio.html" onclick="location.reload()">Continuar al inicio</a>
+    </div>
+</body>
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Acerca de Tranquilidad</h4>
+        <ul>
+            <li><a href="/alimentacion/Inicio/link/quienessomos.html">Acerca de</a></li>
+            <li><a href="/alimentacion/Inicio/link/beneficiosdetranquilidad.html">Beneficios de la Tranquilidad</a></li>
+            <li><a href="/alimentacion/inicio/link/consejodebienestar.html">Consejos de Bienestar</a></li>
+        </ul>
+    </div>
+      <div class="footer-column">
+        <h4>Ayuda y Soporte</h4>
+        <ul>
+          <li><a href="/alimentacion/inicio/link/contacto.html">Contacto</a></li>
+          <li><a href="/alimentacion/inicio/link/sugerencias.html">Sugerencias</a></li>
+          <li><a href="/alimentacion/inicio/link/guiadeuso.html">Guía de uso</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Información Legal</h4>
+        <ul>
+          <li><a href="/alimentacion/inicio/link/terminosycondiciones.html">Términos y condiciones</a></li>
+          <li><a href="/alimentacion/inicio/link/politica de privacidad .html">Política de privacidad</a></li>
+          <li><a href="/alimentacion/inicio/link/avisolegal.html">Aviso legal</a></li>
+        </ul>
+      </div>
+      
+    </div>
+    
+    <div class="footer-bottom">
+      <p>Copyright © 2024 Tranquilidad. Todos los derechos reservados.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+</footer>
+
+  <script src="../Script_Hea_Foo/Establecer_M_S.js"></script>
+  <script src="../Script_Hea_Foo/Header.js"></script>
+  
+</html>
