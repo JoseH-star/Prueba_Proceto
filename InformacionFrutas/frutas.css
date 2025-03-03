@@ -1,6 +1,6 @@
 /* Fondo del cuerpo con marca de agua */
 body {
-    background: url('../inclued/ALIMENTACION_FRUTAS.jpg') no-repeat center center fixed; /* Imagen no se repite */
+    background: url('../inclued/fONDO_FRUTAS.jpg') no-repeat center center fixed; /* Imagen no se repite */
     background-size: cover; /* La imagen cubre toda la pantalla */
     background-blend-mode: overlay; /* Mezcla la imagen con el color de fondo */
     background-color: rgba(255, 245, 220, 0.8); /* Fondo beige pálido translúcido */
@@ -19,6 +19,7 @@ body {
     border-radius: 25px; /* Forma redonda */
     text-align: center;
     display: flex;
+    cursor: pointer;
     flex-direction: column; /* Flexbox para organizar el contenido dentro de la carta */
     justify-content: space-between;
     box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.1), 
