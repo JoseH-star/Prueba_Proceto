@@ -1,4 +1,3 @@
-
 let progresoReal = 69;
 let metaPeso = document.getElementById('metaPeso').value;
 
@@ -8,16 +7,38 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("planDieta").value = localStorage.getItem("planDieta") || "No disponible";
 });
 
-
-
 // Botón de actualizar: muestra una alerta de actualización
 document.getElementById("actualizar").addEventListener("click", function() {
     alert("Datos actualizados correctamente");
 });
 
-// Botón de guardar: muestra una alerta de guardado
-document.getElementById("guardar").addEventListener("click", function() {
-    alert("Datos guardados correctamente");
+// Botón de guardar: envía los datos al backend
+document.getElementById("guardar").addEventListener("click", async function(event) {
+    event.preventDefault();
+
+    const descripcion = document.querySelector("textarea").value;
+    const fechaObjetivo = document.querySelector("input[type='date']").value;
+    const pesoActual = document.getElementById("pesoActual").value;
+    const metaPeso = document.getElementById("metaPeso").value;
+    const planDieta = document.getElementById("planDieta").value;
+
+    const response = await fetch("http://127.0.0.1:8000/api/objetivo", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + localStorage.getItem("token")
+        },
+        body: JSON.stringify({
+            descripcion,
+            fecha_objetivo: fechaObjetivo,
+            peso_actual: pesoActual,
+            meta_peso: metaPeso,
+            plan_dieta: planDieta
+        })
+    });
+
+    const data = await response.json();
+    alert(data.mensaje);
 });
 
 // Gráfica de progreso
@@ -38,8 +59,6 @@ new Chart(ctxProgress, {
     },
     options: { responsive: true, maintainAspectRatio: false }
 });
-
-
 
 // Gráfica de comparación con la meta
 const ctxGoal = document.getElementById('goalChart').getContext('2d');
@@ -79,4 +98,3 @@ function cambiarTema() {
 function volverInicio() {
     window.location.href = "index.html"; // Cambia esto si el inicio está en otra URL
 }
-

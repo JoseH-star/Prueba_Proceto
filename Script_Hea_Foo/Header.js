@@ -36,3 +36,10 @@ function showTextSlide() {
 }
 setInterval(showTextSlide, 3000); // Cambio automático cada 3 segundos
 showTextSlide(); // Mostrar el primer texto al cargar la página
+
+
+
+fetch('http://127.0.0.1:8000/api/test-inicial')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
