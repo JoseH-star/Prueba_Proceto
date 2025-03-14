@@ -1,6 +1,6 @@
 /* Fondo del cuerpo con marca de agua */
 body {
-    background: url('../inclued/ALIMENTACION22.jpg') no-repeat center center fixed; /* Imagen no se repite */
+    background: url('https://i.pinimg.com/736x/c2/41/16/c241168db76c3252aa7fd24aa384c8af.jpg') no-repeat center center fixed; /* Imagen no se repite */
     background-size: cover; /* La imagen cubre toda la pantalla */
     background-blend-mode: overlay; /* Mezcla la imagen con el color de fondo */
     background-color: rgba(255, 245, 220, 0.8); /* Fondo beige pálido translúcido */

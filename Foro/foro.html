@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Estilos/styleFooter.css">
-    <link rel="stylesheet" href="../Estilos/styleHeader.css">
-    <link rel="stylesheet" href="../Estilos/body-foro.css">
+    <link rel="stylesheet" href="../Script_Hea_Foo/Header.css">
+    <link rel="stylesheet" href="../Script_Hea_Foo/Footer.css">
+    <link rel="stylesheet" href="../Script_Hea_Foo/body-foro.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="../Foro/foro.css">
@@ -13,7 +13,7 @@
 </head>
 <header>
     <div class="logo-container">
-        <a href="/inicio-de-sesion/Modulo-iniciar-sesion/home/home.html"><img href="/inicio-de-sesion/Modulo-iniciar-sesion/home/home.html" src="../inclued/lOGO.jpg " alt="Logo" class="logo"></a>
+        <a href="/inicio-de-sesion/Modulo-iniciar-sesion/home/home.html"><img href="/inicio-de-sesion/Modulo-iniciar-sesion/home/home.html" src="../inclued/lOGO.jpg" alt="Logo" class="logo"></a>
        
     </div>
     <button2 class="hamburger" onclick="toggleHamburgerMenu()">☰</button2>
@@ -66,93 +66,149 @@
     </div>
 </header>
 <body>
+    <main class="container">
+        <!-- Tarjeta 1 -->
+        <div class="card">
+            <div class="profile">
+                <img src="../inclued/usuaria1.png" alt="Elisabeth May">
+                <div>
+                    <p class="name">Elisabeth May</p>
+                    <p class="time">⏰ Hace 6 horas</p>
+                </div>
+            </div>
+            <p>Cada pequeño cambio suma. Comer más frutas es una excelente decisión, tu cuerpo te lo agradecerá.</p>
     
- <!--Ejemplo del foro, ejemplo principal-->
-<main class="container">
-    <!-- Tarjeta 1 -->
-    <div class="card">
-        <div class="profile">
-            <img src="/alimentacion 2/alimentacion/Inicio/usuaria1.png" alt="Elisabeth May">
-            <div>
-                <p class="name">Elisabeth May</p>
-                <p class="time">Hace 6 horas</p>
+            <div class="actions-right">
+                <button class="like-button" onclick="incrementLike(this)">❤️ <span class="like-count">0</span></button>
+                <button class="edit-button">📝</button>
+                <button class="delete-button">🚮</button>
+            </div>
+    
+            <div class="reactions">
+                <img src="https://i.pravatar.cc/30?img=1" alt="User">
+                <img src="https://i.pravatar.cc/30?img=2" alt="User">
+                <span>👍 +11</span>
+            </div>
+    
+            <div class="comment-container">
+                <button class="addCardBtn">💭</button>
+                <div class="commentContainer"></div>
             </div>
         </div>
-        <p>Cada pequeño cambio suma. Comer más frutas es una excelente decisión, tu cuerpo te lo agradecerá.</p>
-        <button class="like-button" onclick="incrementLike(this)">
-            <span class="heart">❤️</span>
-            <span class="like-count">0</span>
-        </button>
-        <div class="reactions">
-            <img src="https://i.pravatar.cc/30?img=1" alt="User">
-            <img src="https://i.pravatar.cc/30?img=2" alt="User">
-            <span>+11</span>
+    
+        <!-- Tarjeta 2 -->
+        <div class="card">
+            <div class="profile">
+                <img src="../inclued/usuaria2.png" alt="Carlos Ruiz">
+                <div>
+                    <p class="name">Carlos Ruiz</p>
+                    <p class="time">⏰ Hace 3 horas</p>
+                </div>
+            </div>
+            <p>Beber suficiente agua a lo largo del día es clave para mantenernos saludables y con energía.</p>
+    
+            <div class="actions-right">
+                <button class="like-button" onclick="incrementLike(this)">❤️ <span class="like-count">0</span></button>
+                <button class="edit-button">📝</button>
+                <button class="delete-button">🚮</button>
+            </div>
+    
+            <div class="reactions">
+                <img src="https://i.pravatar.cc/30?img=3" alt="User">
+                <img src="https://i.pravatar.cc/30?img=4" alt="User">
+                <span>👍 +7</span>
+            </div>
+    
+            <div class="comment-container">
+                <button class="addCardBtn">💭</button>
+                <div class="commentContainer"></div>
+            </div>
+        </div>
+    
+        <!-- Tarjeta 3 -->
+        <div class="card">
+            <div class="profile">
+                <img src="../inclued/Usuario3.png" alt="Ana Gómez">
+                <div>
+                    <p class="name">Ana Gómez</p>
+                    <p class="time">⏰ Hace 1 hora</p>
+                </div>
+            </div>
+            <p>Las proteínas son esenciales para la reparación y crecimiento muscular. Asegúrate de incluirlas en tu dieta.</p>
+    
+            <div class="actions-right">
+                <button class="like-button" onclick="incrementLike(this)">❤️ <span class="like-count">0</span></button>
+                <button class="edit-button">📝</button>
+                <button class="delete-button">🚮</button>
+            </div>
+    
+            <div class="reactions">
+                <img src="https://i.pravatar.cc/30?img=5" alt="User">
+                <img src="https://i.pravatar.cc/30?img=6" alt="User">
+                <span>👍 +15</span>
+            </div>
+    
+            <div class="comment-container">
+                <button class="addCardBtn">💭</button>
+                <div class="commentContainer"></div>
+            </div>
+        </div>
+    
+        <!-- Tarjeta 4 -->
+        <div class="card">
+            <div class="profile">
+                <img src="../inclued/Usuario4.png" alt="Sofía Martínez">
+                <div>
+                    <p class="name">Sofía Martínez</p>
+                    <p class="time">⏰ Hace 30 minutos</p>
+                </div>
+            </div>
+            <p>Incluir más verduras en tus comidas mejora tu digestión y aporta vitaminas esenciales.</p>
+    
+            <div class="actions-right">
+                <button class="like-button" onclick="incrementLike(this)">❤️ <span class="like-count">0</span></button>
+                <button class="edit-button">📝</button>
+                <button class="delete-button">🚮</button>
+            </div>
+    
+            <div class="reactions">
+                <img src="https://i.pravatar.cc/30?img=7" alt="User">
+                <img src="https://i.pravatar.cc/30?img=8" alt="User">
+                <span>👍 +9</span>
+            </div>
+    
+            <div class="comment-container">
+                <button class="addCardBtn">💭</button>
+                <div class="commentContainer"></div>
+            </div>
+        </div>
+    </main>
+    
+ <!-- Barra lateral izquierda con opción para crear publicación -->
+ <div class="sidebar-left">
+     <div class="create-post-section">
+         <p class="create-post-text">Comparte tus experiencias</p>
+         <button id="createPostBtn" class="create-button" onclick="addNewCard()">+</button>
+     </div>
+ </div>
+ 
+<!-- Modal para nueva publicación -->
+<div id="postModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Nueva publicación</h3>
+            <span class="close-modal">&times;</span>
+        </div>
+        <div class="modal-body">
+            <textarea id="newPostContent" placeholder="¿Qué quieres compartir hoy?"></textarea>
+        </div>
+        <div class="modal-footer">
+            <button id="publishPostBtn">Publicar</button>
         </div>
     </div>
+</div>
 
-    <!-- Tarjeta 2 -->
-    <div class="card">
-        <div class="profile">
-            <img src="/alimentacion 2/alimentacion/Inicio/usuaria2.png" alt="Carlos Ruiz">
-            <div>
-                <p class="name">Carlos Ruiz</p>
-                <p class="time">Hace 3 horas</p>
-            </div>
-        </div>
-        <p>Beber suficiente agua a lo largo del día es clave para mantenernos saludables y con energía.</p>
-        <button class="like-button" onclick="incrementLike(this)">
-            <span class="heart">❤️</span>
-            <span class="like-count">0</span>
-        </button>
-        <div class="reactions">
-            <img src="https://i.pravatar.cc/30?img=3" alt="User">
-            <img src="https://i.pravatar.cc/30?img=4" alt="User">
-            <span>+7</span>
-        </div>
-    </div>
 
-    <!-- Tarjeta 3 -->
-    <div class="card">
-        <div class="profile">
-            <img src="/alimentacion 2/alimentacion/Inicio/usuaria3.png" alt="Ana Gómez">
-            <div>
-                <p class="name">Ana Gómez</p>
-                <p class="time">Hace 1 hora</p>
-            </div>
-        </div>
-        <p>Las proteínas son esenciales para la reparación y crecimiento muscular. Asegúrate de incluirlas en tu dieta.</p>
-        <button class="like-button" onclick="incrementLike(this)">
-            <span class="heart">❤️</span>
-            <span class="like-count">0</span>
-        </button>
-        <div class="reactions">
-            <img src="https://i.pravatar.cc/30?img=5" alt="User">
-            <img src="https://i.pravatar.cc/30?img=6" alt="User">
-            <span>+15</span>
-        </div>
-    </div>
-
-    <!-- Tarjeta 4 -->
-    <div class="card">
-        <div class="profile">
-            <img src="/alimentacion 2/alimentacion/Inicio/usuaria4.png" alt="Sofía Martínez">
-            <div>
-                <p class="name">Sofía Martínez</p>
-                <p class="time">Hace 30 minutos</p>
-            </div>
-        </div>
-        <p>Incluir más verduras en tus comidas mejora tu digestión y aporta vitaminas esenciales.</p>
-        <button class="like-button" onclick="incrementLike(this)">
-            <span class="heart">❤️</span>
-            <span class="like-count">0</span>
-        </button>
-        <div class="reactions">
-            <img src="https://i.pravatar.cc/30?img=7" alt="User">
-            <img src="https://i.pravatar.cc/30?img=8" alt="User">
-            <span>+9</span>
-        </div>
-    </div>
-</main>
 
 <style>
     .card {
@@ -238,6 +294,6 @@
     </div>
   </footer>
   
-  <script src="../alimentacion 2/alimentacion/foro.js"></script>
+  <script src="./foro.js"></script>
   <script src="../Script_Hea_Foo/Header.js"></script>
 </html>

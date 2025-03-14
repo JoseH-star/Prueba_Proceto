@@ -11,7 +11,7 @@
             --btn-bg: #5aa5a0;
         }
         body {
-            background-image: url('../inclued/SEGUIMIENTO_PRO.png'); /* Ruta del archivo GIF */
+            background-image: url('https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9uZG8lMjB0cmFucXVpbG98ZW58MHx8MHx8fDA%3D'); /* Ruta del archivo GIF */
             background-size: cover; /* Ajusta el tamaño para cubrir toda la pantalla */
             background-position: center; /* Centra la imagen */
             background-repeat: no-repeat; /* No repetir el GIF */
